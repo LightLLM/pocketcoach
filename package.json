@@ -1,0 +1,59 @@
+{
+  "name": "pocket-coach",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "expo": "~52.0.0",
+    "expo-constants": "~17.0.0",
+    "expo-haptics": "~14.0.0",
+    "expo-linking": "~7.0.0",
+    "expo-router": "~4.0.0",
+    "expo-splash-screen": "~0.29.0",
+    "expo-status-bar": "~2.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.5",
+    "react-native-purchases": "8.4.0",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.0",
+    "@testing-library/react-native": "^12.4.0",
+    "@types/jest": "^29.5.0",
+    "@types/react": "~18.3.12",
+    "jest": "^29.7.0",
+    "jest-expo": "~52.0.0",
+    "react-test-renderer": "18.3.1",
+    "typescript": "~5.3.0"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|expo-router|@react-native-async-storage/async-storage|react-native-purchases)"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1",
+      "^expo-modules-core/src/Refs$": "<rootDir>/__mocks__/expo-modules-core-Refs.js",
+      "^expo-modules-core/src/web/index.web$": "<rootDir>/__mocks__/expo-modules-core-web.js"
+    },
+    "testPathIgnorePatterns": ["/node_modules/"],
+    "collectCoverageFrom": [
+      "lib/**/*.ts",
+      "context/**/*.tsx",
+      "components/**/*.tsx",
+      "data/**/*.ts",
+      "!**/*.d.ts"
+    ]
+  },
+  "private": true
+}
